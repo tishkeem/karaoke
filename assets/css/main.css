@@ -8797,8 +8797,3 @@ body.is-preload .items.onload-fade-in>*>.inner {
 #wrapper.divided>.invert:first-child {
 	box-shadow: none !important;
 }
-
-#driving-gif {
-	position: relative;
-	transition-duration: 0.175s;
-}

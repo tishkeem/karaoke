@@ -8,8 +8,7 @@
 
 	var	$window = $(window),
 		$body = $('body'),
-		$wrapper = $('#wrapper'),
-		$drivingGif = $('#driving-gif');
+		$wrapper = $('#wrapper');
 
 	// Breakpoints.
 		breakpoints({
@@ -26,20 +25,6 @@
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
-		});
-
-	// Play driving animations on scroll.
-		const initialLeft = $drivingGif.position().left;
-		const scrollThreshold = 0;
-		const drivingSpeed = -1;
-
-		$window.on('scroll', function() {
-			if(document.documentElement.scrollTop > scrollThreshold && document.documentElement.scrollTop < 1000) {
-				const newLeft = initialLeft + ((document.documentElement.scrollTop - scrollThreshold) * drivingSpeed);
-				$drivingGif.offset({left : newLeft});
-			} else {
-				$drivingGif.offset({left : initialLeft});
-			}
 		});
 
 	// Browser fixes.
